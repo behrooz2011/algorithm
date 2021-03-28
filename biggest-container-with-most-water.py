@@ -37,3 +37,4 @@ b = [3, 1, 2, 4, 5]
  
 print(maxArea(a))
 print(maxArea(b))
+print("hi")
