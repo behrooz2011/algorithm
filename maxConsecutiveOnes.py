@@ -33,16 +33,17 @@ def ones(arr):
 print(ones([1,1,0,1,1,1,1,9,9,1]))
 
 #better solution
-
-def ones (x):
-  count = 0
-  compare=0
-  for i in range (len(x)):
-    if x[i]==1:
-      count +=1
-    else:
-      compare= max(compare,count)
-      count = 0
-  return compare
+class Solution:
+    def findMaxConsecutiveOnes(self, x: List[int]) -> int:
+          count = 0
+          compare=0
+          for i in range (len(x)):
+            if x[i]==1:
+              count +=1
+            else:
+              compare= max(compare,count)
+              count = 0
+          return(max(compare,count))
 print(ones([1,2,1,1,1,0,3,2,1,1,1,1,1,3,1]))
 print(ones([1,1,2,0,1,1,1,9,1]))
+print(ones([1,0,1,1]))
