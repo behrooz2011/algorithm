@@ -37,3 +37,12 @@ def isUniq_NoAdd(x):
 print(isUniq_NoAdd("hello"))
 print(isUniq_NoAdd("hello guys!"))
 print(isUniq_NoAdd("my car"))
+
+def isUniq_NoAdd(x):
+    for i in range(len(x)):
+        if i+1 <len(x) and "".join(sorted(x))[i]=="".join(sorted(x))[i+1]:
+            return False
+    return True
+print(isUniq_NoAdd("hello"))
+print(isUniq_NoAdd("hello guys!"))
+print(isUniq_NoAdd("my car"))
