@@ -1,4 +1,4 @@
-
+#Left Data Right
 #LDR
 print("hi")
 class Node:
@@ -11,15 +11,18 @@ def inOrderIter(root, result):
     if not root:
         return result
     stack =[]
-    stack.append(root)
-    while stack:
-        node = stack.pop()
-        result.append(node.data)
-        if node.right: stack.append(node.right)
-        if node.left: stack.append(node.left)
-    # inorderRecursive(root.right, result)
+    node = root
+    while stack or node:
+        if node:
+            stack.append(node)
+            node = node.left
+        else:
+            node = stack.pop()
+            result.append(node.data)
+            node = node.right
 
-def preorderTraversal(root):
+
+def inorderTraversal(root):
     answer = []
     inOrderIter(root, answer)
     return answer
@@ -32,4 +35,4 @@ r.left.right = Node(5)
 r.right.right = Node(7)
 r.right.left= Node(6)
 
-print("PreOrder Traversal Iterative: ",preorderTraversal(r))
+print("InOrder Traversal Iterative: ",inorderTraversal(r))
