@@ -56,3 +56,31 @@ print(pali("level"))
 print(pali("lebel"))
 print(pali("ellv"))
 print(pali("ellv"))
+
+
+# pair comparison method
+def check_permutation_by_sort(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    s1, s2 = sorted(s1), sorted(s2)
+    for i in range(len(s1)):
+        if s1[i] != s2[i]:
+            return False
+    return True
+
+from collections import Counter
+ll = ["a","b","a"]
+c = Counter(ll)
+for i in c:
+    print(i)
+for val in c.values():
+    print(val)
+print(c)
+
+def is_palindrome_permutation_pythonic(phrase):
+    """function checks if a string is a permutation of a palindrome or not"""
+    counter = Counter(phrase.replace(" ", "").lower())
+    return sum(val % 2 for val in counter.values()) <= 1
+print(is_palindrome_permutation_pythonic("level"))
+print(is_palindrome_permutation_pythonic("lebel"))
+print(is_palindrome_permutation_pythonic("levell"))
