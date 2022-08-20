@@ -25,21 +25,26 @@ class Solution:
         # print("this is i:\t",i)
         # print("this is d:\t",d)
         return(result)
-r=Node(1)
-r.right = Node(3)
-r.left= Node(2)
-r.left.left=Node(4)
-r.left.right = Node(5)
-r.left.left.right = Node(50)
-r.left.left.right.left = Node(500)
-print(Solution().ino(r,[]))
 
-rr=Node(1)
-rr.right = Node(3)
-rr.left= Node(2)
-rr.left.left=Node(4)
-rr.left.right = Node(5)
-rr.right.left= Node(6)
-rr.right.right = Node(7)
-print(Solution().ino(rr,[]))
-"""Finding the depth of a tree"""
+
+""" Manual Creation of a Tree """
+# r=Node(1)
+# r.right = Node(3)
+# r.left= Node(2)
+# r.left.left=Node(4)
+# r.left.right = Node(5)
+# r.left.left.right = Node(50)
+# r.left.left.right.left = Node(500)
+# print(Solution().ino(r,[]))
+
+# rr=Node(1)
+# rr.right = Node(3)
+# rr.left= Node(2)
+# rr.left.left=Node(4)
+# rr.left.right = Node(5)
+# rr.right.left= Node(6)
+# rr.right.right = Node(7)
+# print(Solution().ino(rr,[]))
+"""End of Manual Creation of a Tree"""
+
+

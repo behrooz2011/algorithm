@@ -34,7 +34,7 @@ print(ones([1,1,0,1,1,1,1,9,9,1]))
 
 #better solution
 class Solution:
-    def findMaxConsecutiveOnes(self, x: List[int]) -> int:
+    def findMaxConsecutiveOnes(self, x):
           count = 0
           compare=0
           for i in range (len(x)):
