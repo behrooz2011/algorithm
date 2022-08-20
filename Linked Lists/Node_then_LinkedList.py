@@ -44,6 +44,21 @@ class LinkedList:
             current = current.next
         return counter
 
+""" Make a LL from an array"""      
+def makeFromArray(arr):
+    print("create a linked list from an array")
+    res = LinkedList()
+    res.head = Node(arr[0])
+    temp = res.head
+    for i in range(1,len(arr)):
+        temp.next = Node(arr[i])
+        temp = temp.next
+    return res
+
+makeFromArray([7 ,9 , 12, 1 , 0 , 100, -7])
+result = makeFromArray([7 ,9 , 12, 1 , 0 , 100,-7])
+print("length of this new LL: ",result.lenList())
+
 
 # Linked List with a single node
 LL = LinkedList()
@@ -54,3 +69,4 @@ print(LL.head.next.data) #7
 LL.head.next.next = Node(4)
 print(LL.head.next.next.data)
 print("len",LL.lenList())
+
