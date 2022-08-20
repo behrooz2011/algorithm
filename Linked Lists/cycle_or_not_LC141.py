@@ -40,3 +40,18 @@ ll.head.next.next.next = Node(-4)
 ll.head.next.next.next.next = Node(2)
 jj = Solution()
 print(jj.hasCycle(ll))
+
+
+""" Space complexity O(1): two pointer === two racers """
+class Solution:
+    def hasCycle(self, head) -> bool:
+        if head is None:
+            return False
+        slow = head
+        fast = head.next
+        while slow != fast:
+            if fast is None or fast.next is None:
+                return False
+            slow = slow.next
+            fast = fast.next.next
+        return True
