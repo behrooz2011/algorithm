@@ -59,5 +59,6 @@ print(Solution().levelOrder(r))
                      \
                       \
                        40
+                        
 """
 " result = [[1], [2, 3], [4, 5, 'null', 100], [40, 'null', 'null']] "
