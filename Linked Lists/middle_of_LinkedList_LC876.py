@@ -28,5 +28,7 @@ LL.head = ListNode(4)
 LL.head.next = ListNode(5)
 L3 = LL.head.next.next = ListNode(70)
 LL.head.next.next.next = ListNode(1)
+LL.head.next.next.next.next = ListNode(10)
+
 
 print(LL.answer())
