@@ -13,7 +13,7 @@ class Level:
         node = root
         print("root: ",root.data)
         result.append(node.data)
-        while helper or node:
+        while helper or node: # or while len(helper) > 0
             if node.left:
                 result.append(node.left.data)
                 helper.insert(0,node.left)
