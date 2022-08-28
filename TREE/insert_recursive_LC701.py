@@ -19,7 +19,7 @@ class Solution:
         if root is None:
             return Node(val)
 
-        if val > root.data: # if new value is greater than the node, shift right
+        if val > root.data: # if new value is greater than the node, shift right otherwise,shift left
 
             if not root.right:
                 root.right = Node(val)
@@ -32,6 +32,7 @@ class Solution:
                 root.left = Node(val)
             else:
                 self.insertIntoBST(root.left,val)
+        return root #needed for leetcode
         
 
 class Inorder:
@@ -42,6 +43,14 @@ class Inorder:
         result.append(root.data)
         self.inOrderRecur(root.right,result)
         return result
+class Preorder:
+    def pre(self,root,result):
+        if not root:
+            return
+        result.append(root.data)
+        self.pre(root.left,result)
+        self.pre(root.right,result)
+        return(result)
 
 r=Node(1)
 r.right = Node(3)
@@ -71,3 +80,14 @@ t.right.right = Node(7)
 print("Inorder BEFORE inserting 2.5 :",Inorder().inOrderRecur(t,[]))
 Solution().insertIntoBST(t,2.5)
 print("Inorder AFTER inserting 2.5 :",Inorder().inOrderRecur(t,[]))
+
+print(" \n___________________________________________")
+u = Solution().insertIntoBST(None,3.5)
+Solution().insertIntoBST(u,2)
+Solution().insertIntoBST(u,3)
+Solution().insertIntoBST(u,4)
+Solution().insertIntoBST(u,5)
+Solution().insertIntoBST(u,6)
+Solution().insertIntoBST(u,7)
+print("Tree created from nothing:",Inorder().inOrderRecur(u,[]))
+print("Preorder of the new Tree:",Preorder().pre(u,[]))
