@@ -26,6 +26,24 @@ class Level:
             else:
                 break
         return result
+
+        ''' Clean Solution'''
+    def levelOrder(self,root, result):
+        if root is None:
+            return 
+        queue = [] 
+        queue.append(root)
+        result.append(root.data)
+
+        while queue:
+            node = queue.pop()
+            if node.left:
+                result.append(node.left.data)
+                queue.insert(0,node.left)
+            if node.right:
+                result.append(node.right.data)
+                queue.insert(0,node.right)
+        return result
 r = Node(1)
 r.right = Node(3)
 r.left= Node(2)
