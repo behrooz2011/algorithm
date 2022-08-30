@@ -19,7 +19,7 @@ class Solution:
         q = []
         q.append(root)
         result.insert(0,root.data)
-        
+
         while q:
             root = q.pop()
             if root.right:
@@ -37,5 +37,7 @@ r.left.left=Node(4)
 r.left.right = Node(5)
 r.right.left= Node(6)
 r.right.right = Node(7)
+
+r.left.left.right=Node(40)
 
 print("Reverse:",Solution().reverse(r,[]))
