@@ -1,13 +1,13 @@
 # Adjacency Matrix representation in Python
 
 
-class Graph(object):
+class Graph:
 
     # Initialize the matrix
     def __init__(self, size):
         self.adjMatrix = []
         for i in range(size):
-            self.adjMatrix.append([0 for i in range(size)])
+            self.adjMatrix.append([0 for i in range(size)]) # 2D array ~ [ [0,0,0], [0,0,0], [0,0,0]]
         self.size = size
 
     # Add edges
@@ -29,11 +29,14 @@ class Graph(object):
         return self.size
 
     # Print the matrix
-    def print_matrix(self):
-        for row in self.adjMatrix:
-            for val in row:
-                print('{:4}'.format(val)),
-            print
+    # def print_matrix(self):
+    #     for row in self.adjMatrix:
+    #         for val in row:
+    #             print('{:4}'.format(val)),
+    #         print
+    def printMy(self):
+        print("hi")
+        print(self.adjMatrix)
 
 
 def main():
@@ -44,7 +47,8 @@ def main():
     g.add_edge(2, 0)
     g.add_edge(2, 3)
 
-    g.print_matrix()
+    # g.print_matrix()
+    g.printMy()
 
 
 if __name__ == '__main__':
