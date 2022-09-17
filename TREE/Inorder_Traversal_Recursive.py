@@ -13,7 +13,7 @@ class Node:
 class Solution:
     def inOrderRecur(self,root, result):
         if not root:
-            return result
+            return
         self.inOrderRecur(root.left,result)
         result.append(root.data)
         self.inOrderRecur(root.right,result)
@@ -35,4 +35,4 @@ r.left.right.right = Node(99)
 r.left.left.left = Node(8)
 
 # print( "InOrder Traversal Recursively:",inorderTraversal(r))
-print( " CLASS/ InOrder Traversal Recursively:",Solution().inOrderRecur(r,[]))
+print( "InOrder Traversal Recursively:",Solution().inOrderRecur(r,[]))

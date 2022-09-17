@@ -35,17 +35,17 @@ r.left.right = Node(5)
 r.right.right = Node(7)
 r.right.left= Node(6)
 
-def automaticTreeCreation(nodeNumber):
-    r
-    for i in range(1,nodeNumber +1):
-        if not r.data:
-            r= Node(i)
-        if i != 1 and i%2 == 0:
-            r.left = Node(i)
-            r= 
-        if i != 1 and i%2 == 1:
-            r.right = Node(i)
-            r = r.right
+# def automaticTreeCreation(nodeNumber):
+#     r
+#     for i in range(1,nodeNumber +1):
+#         if not r.data:
+#             r= Node(i)
+#         if i != 1 and i%2 == 0:
+#             r.left = Node(i)
+#             r= 
+#         if i != 1 and i%2 == 1:
+#             r.right = Node(i)
+#             r = r.right
 
 
 print("InOrder Traversal Iterative: ",inorderTraversal(r))
