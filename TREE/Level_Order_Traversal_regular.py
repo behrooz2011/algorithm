@@ -67,17 +67,30 @@ class Solution:
             
         helper(root, 0)
         return levels
-# Driver Program to test above function
+
+#############################################
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
 root.left.left = Node(4)
 root.left.right = Node(5)
-root.left.right.right = Node(60)
+root.right.left = Node(6)
 root.right.right = Node(7)
-root.right.right.right = Node(70)
+root.right.right.right = Node(100)
+#############################################
+# Driver Program to test above function
+# root = Node(1)
+# root.left = Node(2)
+# root.right = Node(3)
+# root.left.left = Node(4)
+# root.left.right = Node(5)
+# root.left.right.right = Node(60)
+# root.right.right = Node(7)
+# root.right.right.right = Node(70)
 j= Solution()
 
 print("Level Order Traversal of binary tree is -")
 print(j.levelOrder(root))
 # run on terminal:  python "Level Order Traversal - regular.py"
+""" result: [[1], [2, 3], [4, 5, 7], [60, 70]]"""
+"result: [[1], [2, 3], [4, 5, 6, 7], [100]]"

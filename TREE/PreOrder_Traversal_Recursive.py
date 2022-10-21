@@ -2,7 +2,7 @@ from collections import defaultdict
 d = defaultdict(lambda:0)
 # print(d["A"])
 
-print("hi")
+
 class Node:
     def __init__(self,data):
         self.data = data
@@ -15,8 +15,9 @@ def preOrderRecur(root, result):
     result.append(root.data)
     preOrderRecur(root.left,result)
     preOrderRecur(root.right,result)
+    return result
     # preorderRecursive(root.right, result)
-
+#No need for this one below
 def preorderTraversal(root):
     answer = []
     preOrderRecur(root, answer)
@@ -30,5 +31,6 @@ r.left.right = Node(5)
 r.right.right = Node(7)
 r.right.left= Node(6)
 
-preOrderRecur(r,[])
-print("this is the result: ",preorderTraversal(r))
+print(preOrderRecur(r,[]))
+# print("this is the result: ",preorderTraversal(r))
+"""this is the result:  [1, 2, 4, 5, 3, 6, 7]"""
