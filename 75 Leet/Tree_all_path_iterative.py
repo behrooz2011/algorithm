@@ -29,8 +29,7 @@ class Finale:
        
        
         while len(nodeStack) != 0:
-            current = nodeStack[-1]
-            nodeStack.pop(-1)
+            current = nodeStack.pop()
             # print("cur.data",current.data)
             if (not (current.left) and not (current.right)):
                 self.solu.append(self.pathF(current, parent))
