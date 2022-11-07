@@ -47,3 +47,20 @@ r.right.left= Node(6)
 
 print("ino ",Solution().pre(r,[]))
 print("max ",Solution().maxValue(r))
+
+
+r2=Node(1)
+r2.right = Node(3)
+r2.left= Node(2)
+r2.left.left=Node(4)
+r2.left.right = Node(5)
+r2.left.left.right = Node(0)
+print("ino ",Solution().pre(r2,[]))
+
+r22=Node(3)
+r22.right = Node(5)
+r22.left= Node(4)
+r22.left.left=Node(1)
+r22.left.right = Node(2)
+r22.left.right.left = Node(0)
+print("ino ",Solution().pre(r22,[]))
