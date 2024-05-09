@@ -114,3 +114,5 @@ graph_elements = {
 g = graph(graph_elements)
 g.addVertex("f")
 print(g.getVertices())
+
+
