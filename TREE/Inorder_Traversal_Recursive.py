@@ -34,5 +34,15 @@ r.right.left= Node(6)
 r.left.right.right = Node(99)
 r.left.left.left = Node(8)
 
+
+#####
+r = Node(1)
+r.left = Node(2)
+r.right = Node(3)
+r.left.left  = Node(4)
+r.left.right = Node(5)
+r.right.left = Node(6)
+r.right.right = Node(7)
+
 # print( "InOrder Traversal Recursively:",inorderTraversal(r))
 print( "InOrder Traversal Recursively:",Solution().inOrderRecur(r,[]))
